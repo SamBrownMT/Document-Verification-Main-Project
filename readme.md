@@ -18,4 +18,9 @@
 9. Make a app.js file and use the following template https://expressjs.com/en/starter/hello-world.html
 10. Make an index.html file that includes sample text
 11. Install Nodemon using command npm i nodemon --save-dev
-12. Deploy onto CircleCI
+12. Deploy onto CircleCI DETAILS?!
+13. Deploy onto heroku: 
+  - terminal command 'heroku create'
+  - 'git push heroku main'
+  - add (process.env.PORT || to app.js app.listen
+  
