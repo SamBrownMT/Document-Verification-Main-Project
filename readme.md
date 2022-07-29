@@ -23,4 +23,14 @@
   - terminal command 'heroku create'
   - 'git push heroku main'
   - add (process.env.PORT || to app.js app.listen
-  
+
+### Getting the backend up and running:
+- Following https://node-postgres.com/features/connecting and https://www.npmjs.com/package/dotenv
+1. Install PostGres - npm install pg
+2. Install dotenv (to store environmental variables) - npm install dotenv
+3. Create .env file in root folder - touch .env
+4. Populate it with the default values inthe tutorial
+5. Create dbscripts.js, and add some dotenv stuff
+6. Install heroku postgres (on the website)
+7. Update the .env file variables with the info from heroku
+8. 
