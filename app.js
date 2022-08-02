@@ -7,6 +7,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname , "/pages/index.html"))
 })
 
+app.get('/summary', (req, res) => {
+  res.sendFile(path.join(__dirname , "/pages/summary.html"))
+})
+
 app.listen(process.env.PORT || port, () => {
   console.log(`Example app listening on port ${port}`)
 })
@@ -14,4 +18,3 @@ app.listen(process.env.PORT || port, () => {
 app.use('/scripts', express.static(path.join(__dirname, '/scripts')))
 
 app.use('/styles', express.static(path.join(__dirname, '/styles')))
-//app.use(express.static(path.join(__dirname, '../public')))
