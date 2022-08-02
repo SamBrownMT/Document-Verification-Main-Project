@@ -2,23 +2,26 @@
   "name": "verification-project",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "scripts/app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node scripts/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "dev": "nodemon ."
+    "dev": "nodemon . & npm run scss",
+    "scss": "sass --watch node_modules/govuk-frontend/govuk/all.scss styles/main.css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^10.3.1",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "sass": "^1.54.0"
   },
   "dependencies": {
-    "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "govuk-frontend": "^4.2.0",
+    "dotenv": "^16.0.1",
     "pg": "^8.7.3"
   }
 }
