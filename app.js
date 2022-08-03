@@ -1,4 +1,5 @@
 const express = require('express')
+const db = require('./scripts/queries')
 const app = express()
 const port = 3000
 const path = require("path")
@@ -10,6 +11,8 @@ app.get('/', (req, res) => {
 app.get('/summary', (req, res) => {
   res.sendFile(path.join(__dirname , "/pages/summary.html"))
 })
+
+app.get('/users', db.getUsers)
 
 app.listen(process.env.PORT || port, () => {
   console.log(`Example app listening on port ${port}`)

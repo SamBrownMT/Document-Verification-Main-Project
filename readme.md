@@ -30,7 +30,22 @@
 2. Install dotenv (to store environmental variables) - npm install dotenv
 3. Create .env file in root folder - touch .env
 4. Populate it with the default values inthe tutorial
-5. Create dbscripts.js, and add some dotenv stuff
+5. Create dbscripts.js, and add some dotenv stuff (Later binned this)
 6. Install heroku postgres (on the website)
 7. Update the .env file variables with the info from heroku
-8. 
+8. Make a basic table with postico
+
+### Back to the front end:
+1. Noticed that CSS and JS weren't working properly
+  - added the use statements for the paths in app.js
+  - moved app.js into the main project directory (from scripts)
+2. Built summary.html using components from https://design-system.service.gov.uk/styles/layout/#grid-system
+
+### Aaand the back again...
+1. Following some cues from here: https://blog.logrocket.com/crud-rest-api-node-js-express-postgresql/#connecting-postgres-database-node-js
+2. Made queries.js and the getusers query
+3. app.js - added: 
+  - const db = require('./scripts/queries')
+  - app.get('/users', db.getUsers)
+4. added htmlscript.js and the namefinder function
+
