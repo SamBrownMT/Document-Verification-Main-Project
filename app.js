@@ -13,6 +13,7 @@ app.get('/summary', (req, res) => {
 })
 
 app.get('/users', db.getUsers)
+app.get('/ibrahima', db.getUserById)
 
 app.listen(process.env.PORT || port, () => {
   console.log(`Example app listening on port ${port}`)

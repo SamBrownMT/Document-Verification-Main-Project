@@ -23,6 +23,22 @@ const getUsers = (request, response) => {
   })
 }
 
+const getUserById = (request, response) => {
+  const id = 1 //sessionStorage.getItem('id')
+
+  pool.query("SELECT * FROM user_details WHERE id = $1",[id], (error, results) => {
+    if (error) {
+      throw error
+    }
+    response.status(200).json(results.rows)
+  })
+}
+
+function namefinder(){
+  document.getElementById("namesummary").innerHTML = getUserById();
+}
+
 module.exports = {
-	getUsers
+	getUsers,
+  getUserById
 }

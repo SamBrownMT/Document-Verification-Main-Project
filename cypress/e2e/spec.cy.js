@@ -8,4 +8,3 @@ describe('landing page', () => {
     cy.contains('Name of service')
   })
 })
-
