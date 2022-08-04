@@ -1,3 +1,5 @@
+require('dotenv').config()
+console.log(process.env)
 const express = require('express')
 const db = require('./scripts/queries')
 const app = express()
@@ -34,5 +36,5 @@ app.get('/', (req, res) => {
 })
 
 app.get('/summary', (req, res) => {
-  res.render('summary', { })
+  res.render('summary', { name: db.getUserById(1)})
 })
