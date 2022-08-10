@@ -15,10 +15,18 @@ const pool = new Pool({
 
 pool.connect()
 
-function namefinder(){
-  document.getElementById("namesummary").innerHTML = getUserById();
+const getUserById = (request, response) => {
+  const id = 1 //this will change to cookie/sessionStorage
+
+  pool.query('SELECT * FROM user_details WHERE id = $1', [id], (error, results) => {
+    if (error) {
+      throw error
+    }
+    response.send(results.rows)
+  })
 }
 
 module.exports = {
 	query: (text, params) => pool.query(text, params),
+  getUserById
 }
