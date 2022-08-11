@@ -18,7 +18,7 @@
 9. Make a app.js file and use the following template https://expressjs.com/en/starter/hello-world.html
 10. Make an index.html file that includes sample text
 11. Install Nodemon using command npm i nodemon --save-dev
-12. Deploy onto CircleCI DETAILS?!
+12. Deploy onto CircleCI?!
 13. Deploy onto heroku: 
   - terminal command 'heroku create'
   - 'git push heroku main'
@@ -48,4 +48,25 @@
   - const db = require('./scripts/queries')
   - app.get('/users', db.getUsers)
 4. added htmlscript.js and the namefinder function
+5. Then we abandoned this approach because we couldn't request stuff from the db and insert it into the page during rendering.
+
+### Template Engines
+1. Tried pug and EJS. Not much in it, settled on EJS 
+2. npm install ejs
+3. Created summary.ejs and added fields for info from db
+4. App.js - get (/summary) then had a pool.query before rendering the page. This worked
+5. Tidied up by adding summary.js router file
+
+### Heroku
+1. To make it work on heroku we needed to change the postgres connection method to include a URI connection string in the environmental variables
+
+### CircleCI
+1. Was throwing errors trying to connect to the database
+2. Fixed by adding the dotenv environmental variables to Project Settings -> environmental variables
+
+
+
+
+
+
 
