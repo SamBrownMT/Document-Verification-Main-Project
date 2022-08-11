@@ -5,6 +5,6 @@ describe('landing page', () => {
   it('finds the content "name of service"', () => {
     cy.visit('localhost:3000')
 
-    cy.contains('Name of service')
+    cy.contains('Name of Service')
   })
 })
