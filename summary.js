@@ -8,7 +8,15 @@ router.get('/', (req, res) => {
 	};
 	db.query(cmd, function(err, result, fields) {
 		if (err) throw err;
-		res.render('summary',{name: result.rows[0].name});
+		var r = result.rows[0]
+		var full_address = [r.addressline1, r.addressline2, r.addressline3].filter(x => x).join('<br>')
+		res.render('summary',{
+			name: r.name,
+			dateofbirth: r.dateofbirth,
+			address: full_address
+
+
+		});
 	})
 })
 
