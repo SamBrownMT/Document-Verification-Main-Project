@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 const path = require("path")
-const summary = require('./summary')
+const summary = require('./scripts/summary')
 
 app.set('view engine', 'ejs')
 
