@@ -6,12 +6,25 @@ const summary = require('./summary')
 
 app.set('view engine', 'ejs')
 
+app.use(express.urlencoded({
+  extended: true
+}))
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname , "/pages/index.html"))
 })
 
+
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname , "/pages/login.html"))
+})
+
+app.get('/file-upload', (req, res) => {
+  res.sendFile(path.join(__dirname , "/pages/file_upload.html"))
+})
+
+app.post('/summary', (req,res) => {
+  res.redirect('/summary')
 })
 
 app.use('/summary', summary)

@@ -1,0 +1,46 @@
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Section</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link">Subsection</a>
+    </li>
+  </ol>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+</div>
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-xl">Upload Your Documents</h1>
+		<form class="form" action="/summary" method="post">
+			<p>The information and documents provided will be used to confirm your identity.<br>
+			<br>
+			Choose two forms of valid identification (ID) from the list below</p>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>Passport</li>
+				<li>Driving Licence</li>
+				<li>Birth Certificate</li>
+				<li>Biometric residence permits</li>
+			</ul>
+			<br>
+			<p class="govuk-body">Upload your ID using your computer, mobile or tablet device.</p>
+
+			<div class="govuk-form-group">
+				<input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" accept=".jpg,.pdf">
+				<br>
+				<input class="govuk-file-upload" id="file-upload-2" name="file-upload-2" type="file" accept=".jpg,.pdf">
+			</div>
+
+			<button class="govuk-button" data-module="govuk-button">Continue</button>
+
+			<br>
+			<p><a href="#">ID upload help video</a></p>
+
+		</form>
+
+	</div>
+</div>
