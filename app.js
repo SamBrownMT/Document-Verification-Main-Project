@@ -23,6 +23,14 @@ app.get('/file-upload', (req, res) => {
   res.sendFile(path.join(__dirname , "/pages/file_upload.html"))
 })
 
+app.get('/account', (req, res) => {
+  res.sendFile(path.join(__dirname , "/pages/account.html"))
+})
+
+app.post('/account', (req,res) => {
+  res.redirect('/account')
+})
+
 app.post('/summary', (req,res) => {
   res.redirect('/summary')
 })

@@ -7,7 +7,7 @@ describe('summary page', () => {
 		cy.contains('Ibrahima Bakayoko')
         cy.contains('28/04/1976')
         cy.contains('Goodison Road')
-        cy.contains('TO21 7BH')
+        cy.contains('YO21 7BH')
 	})
     
 })
