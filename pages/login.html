@@ -51,48 +51,50 @@
 					<a class="govuk-breadcrumbs__link" href="#">Home</a>
 					</li>
 					<li class="govuk-breadcrumbs__list-item">
-					<a class="govuk-breadcrumbs__link" href="#">BREADCRUMBS1</a>
+					<a class="govuk-breadcrumbs__link" href="#">Section</a>
 					</li>
 					<li class="govuk-breadcrumbs__list-item">
-					<a class="govuk-breadcrumbs__link" href="#">BREADCRUMBS2</a>
+					<a class="govuk-breadcrumbs__link" href="#">Subsection</a>
 					</li>
 				</ol>
+				<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 			</div>
 
 			<main class="govuk-main-wrapper " id="main-content" role="main">
 				<div class="govuk-grid-row">
-                    <div class="govuk-grid-column-two-thirds">
-                        <fieldset class="govuk-fieldset">
-                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                            <h1 class="govuk-fieldset__heading">
-                                Please enter your username and password
-                            </h1>
-                            </legend>
-                        
-                            <div class="govuk-form-group">
-                            <label class="govuk-label" for="username">
-                                Username
-                            </label>
-                            <input class="govuk-input govuk-!-width-one-half" id="username" name="username" type="text" autocomplete="username">
-                            </div>
-                        
-                            <div class="govuk-form-group">
-                            <label class="govuk-label" for="password">
-                                Password
-                            </label>
-                            <input class="govuk-input govuk-!-width-one-half" id="password" name="password" type="password">
-                            </div>
-                        
-                        </fieldset>
-
-                        <p class="govuk-body-s"><a href="tbc">Forgotten your password?</a></p>
-
-                        <button class="govuk-button" data-module="govuk-button">
-                            Login
-                        </button>
-
-                        <p class="govuk-body-s">If you don't have an account you can <a href="createaccount">create an account here.</a></p>
-                    </div>
+					<div class="govuk-grid-column-one-half">
+				
+					  <h1 class="govuk-heading-xl">Sign in</h1>
+				
+					  <form class="form" action="/account" method="post">
+						
+						<div class="govuk-form-group">
+				
+						  <label class="govuk-label" for="email-address">Email:</label>
+				
+						  <input class="govuk-input" id="email-address" name="email-address" type="email">
+				
+						</div>
+				
+						<div class="govuk-form-group">
+				
+						  <label class="govuk-label" for="password">Password:</label>
+				
+						  <input class="govuk-input" id="password" name="password" type="password">
+				
+						  <p class="govuk-body"><a href="#">Forgotten your password?</a></p>
+				
+						</div>
+				
+						<button class="govuk-button" data-module="govuk-button">Continue</button>
+				
+					  </form>
+					</div>
+					<div class="govuk-grid-row">
+						<div class="govuk-grid-column-two-thirds" style="margin-left: 1em;">
+					  		<p class="govuk-body">If you don't have an account you can <a href="/create-account">create an account.</a></p>
+						</div>
+					</div>
 				</div>
 			</main>
 		</div>
