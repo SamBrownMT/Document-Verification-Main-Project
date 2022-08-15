@@ -25,3 +25,14 @@ describe('account page', () => {
     })
   })
 })
+
+describe('confirmation page', () => {
+  it('should go to the confirmation page', () => {
+    cy.visit('localhost:3000/confirmation')
+  })
+  it('finds the content "Application complete"', () => {
+    cy.visit('localhost:3000/confirmation')
+
+    cy.contains('Application complete')
+  })
+})
