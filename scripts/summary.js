@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const db = require('./scripts/queries')
+const db = require('./queries')
 
 router.get('/', (req, res) => {
 	var cmd = {text: 'SELECT * from user_details WHERE id = $1',
@@ -13,8 +13,10 @@ router.get('/', (req, res) => {
 		res.render('summary',{
 			name: r.name,
 			dateofbirth: r.dateofbirth,
-			address: full_address
-
+			address: full_address,
+			phonenumber: r.phonenumber,
+			emailaddress: r.emailaddress,
+			filename1: r.filename1
 
 		});
 	})
