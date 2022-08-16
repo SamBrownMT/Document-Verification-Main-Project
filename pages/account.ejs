@@ -45,66 +45,70 @@
 
 		<div class="govuk-width-container ">
 			<div class="govuk-breadcrumbs">
-				<ol class="govuk-breadcrumbs__list">
-					<li class="govuk-breadcrumbs__list-item">
-						<a class="govuk-breadcrumbs__link" href="#">Home</a>
-					</li>
-					<li class="govuk-breadcrumbs__list-item">
-						<a class="govuk-breadcrumbs__link" href="#">Breadcrumbs 1</a>
-					</li>
-					<li class="govuk-breadcrumbs__list-item">
-						<a class="govuk-breadcrumbs__link" href="#">Breadcrumbs 2</a>
-					</li>
-				</ol>
-			</div>
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="#">Section</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link">Subsection</a>
+          </li>
+        </ol>
+        <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+      </div>
 			<main class="govuk-main-wrapper " id="main-content" role="main">
-				<div class="govuk-grid-row">
-					<div class="govuk-grid-column-two-thirds">
-					<h1 class="govuk-heading-xl">Team 3's A Crowd's Rad Service</h1>
-					<div id="more-detail-hint" class="govuk-hint">
-					<h2>Check your details are correct</h2>
-					</div>
-						<dl class="govuk-summary-list">
-							<div class="govuk-summary-list__row">
-								<dt class="govuk-summary-list__key">
-									Name
-								</dt>
-								<dd class="govuk-summary-list__value">
-									<%= name %>
-								</dd>
-								<dd class="govuk-summary-list__actions">
-									<a class="govuk-link" href="#">
-										Change<span class="govuk-visually-hidden"> name</span>
-									</a>
-								</dd>
-							</div>
-							<div class="govuk-summary-list__row">
-								<dt class="govuk-summary-list__key">
-									Date of birth
-								</dt>
-								<dd class="govuk-summary-list__value">
-									<%= dateofbirth %>
-								</dd>
-								<dd class="govuk-summary-list__actions">
-									<a class="govuk-link" href="#">
-										Change<span class="govuk-visually-hidden"> date of birth</span>
-									</a>
-								</dd>
-							</div>
-							<div class="govuk-summary-list__row">
-								<dt class="govuk-summary-list__key">
-									Address
-								</dt>
-								<dd class="govuk-summary-list__value">
-									<%- address %>
-								</dd>
-								<dd class="govuk-summary-list__actions">
-									<a class="govuk-link" href="#">
-										Change<span class="govuk-visually-hidden"> address</span>
-									</a>
-								</dd>
-							</div>
-							<div class="govuk-summary-list__row">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds-from-desktop">
+      
+            <h1 class="govuk-heading-xl">Name of Service</h1>
+      
+            <div id="more-detail-hint" class="govuk-hint">
+              <h2>Are these details correct?</h2>
+            </div>
+      
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <%= name %>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/create-account">
+                    Change<span class="govuk-visually-hidden"> name</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Date of birth
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <%= dateofbirth %>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/additional-info">
+                    Change<span class="govuk-visually-hidden">{{ data['date-of-birth'] }}</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <%- address %>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a class="govuk-link" href="/additional-info">
+                    Change<span class="govuk-visually-hidden"> address</span>
+                  </a>
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
 								<dt class="govuk-summary-list__key">
 									Phone number
 								</dt>
@@ -130,26 +134,19 @@
 									</a>
 								</dd>
 							</div>
-							<div class="govuk-summary-list__row">
-								<dt class="govuk-summary-list__key">
-									File attachment 1
-								</dt>
-								<dd class="govuk-summary-list__value">
-									<%- filename1 %>
-								</dd>
-								<dd class="govuk-summary-list__actions">
-									<a class="govuk-link" href="#">
-										Change<span class="govuk-visually-hidden"> file</span>
-									</a>
-								</dd>
-							</div>
-						</dl>
-						
-						<button class="govuk-button" data-module="govuk-button">
-								Submit
-						</button>
-					</div>
-				</div>
+        
+            </dl>
+      
+            <form action="/file-upload" method="post">
+      
+              <button type="submit" class="govuk-button" data-module="govuk-button">
+                Continue
+              </button>
+      
+            </form>
+      
+          </div>
+        </div>
 			</main>
 		</div>
 		
