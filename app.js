@@ -3,6 +3,7 @@ const app = express()
 const port = 3000
 const path = require("path")
 const summary = require('./scripts/summary')
+const db = require('./scripts/queries')
 
 app.set('view engine', 'ejs')
 
@@ -28,7 +29,20 @@ app.get('/account', (req, res) => {
 })
 
 app.post('/account', (req,res) => {
+  userEmailAddress = req.body['email-address']
+  var cmd = {text: 'SELECT * from user_details WHERE emailaddress = $1',
+		values: [userEmailAddress]
+	};
+  db.query(cmd, function(err, result, fields) {
+		if (err) throw err;
+    currentUser = result.rows[0]
+	});
+
   res.redirect('/account')
+})
+
+app.get('/current-user', (req,res) => {
+  res.json(currentUser)
 })
 
 app.post('/summary', (req,res) => {

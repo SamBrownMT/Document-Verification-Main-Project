@@ -15,6 +15,14 @@ describe('login page', () => {
 		cy.get('button').click()
 		cy.url().should('eq','http://localhost:3000/account')
   })
+  // it('remember current user', () => {
+	// 	cy.visit('localhost:3000/login')
+  //   cy.get('#email-address')
+  //     .type('ibrahima@bakayoko.com')
+	// 	cy.get('button').click()
+	// 	cy.visit('http://localhost:3000/current-user')
+  //   cy.contains('Ibrahima Bakayoko')
+  // })
 })
 
 describe('account page', () => {

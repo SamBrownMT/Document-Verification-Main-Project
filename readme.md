@@ -63,10 +63,3 @@
 ### CircleCI
 1. Was throwing errors trying to connect to the database
 2. Fixed by adding the dotenv environmental variables to Project Settings -> environmental variables
-
-
-
-
-
-
-
